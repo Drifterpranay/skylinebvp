@@ -1,0 +1,22 @@
+h2{
+    font-size: x-large;
+    font-style: bold;
+    text-align: center;
+}
+h3{
+    font-size: large;
+    text-decoration:solid;
+    text-align: center; 
+}
+p{
+    font-size: medium;
+    padding: 20px;
+}
+div{
+    width: 950px;
+    margin-left: 250px;
+    border: 5px solid;
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

@@ -1,0 +1,81 @@
+<!-- <p>showemployees TABLE!</p> -->
+<div class="container">
+<p style="margin-left: 50%;"><b>User Details</b></p>
+<table>
+    <tr>
+        <th>EMPID</th>
+        <th>EMPNAME</th>
+        <!-- <th>EMPSALARY</th> -->
+        <!-- <th>DATEOFJOIN</th> -->
+        <th>EMAILID</th>
+        <!-- <th>PASSWORD</th> -->
+        <!-- <th>GENDER</th> -->
+        <!-- <th>EXPRIENCE</th> -->
+        <!-- <th>LOCATION</th> -->
+    </tr>
+    <tr *ngFor="let employee of employee">
+       <td>{{employee.id}}</td>
+       <td>{{ employee.name}} </td>
+       <!-- <td>{{employee.salary}}</td> -->
+       <!-- <td>{{employee.DOJ |date }}</td> -->
+       <td>{{employee.email}}</td>
+       <!-- <td>{{employee.password}}</td> -->
+       <!-- <td>{{employee.gender}}</td> -->
+       <!-- <td>{{employee.DOJ | experience}}</td> -->
+       <!-- <td>{{employee.location |country}}</td> -->
+      <!-- <td> 
+        <button type="button" class="btn btn-default btn-sm" >
+            <span class="glyphicon glyphicon-trash"></span> 
+            <h6>Delete</h6>
+          </button> 
+    </td>  -->
+    </tr>
+</table>
+
+ <a class="button is-light"  routerLink="logout" style="margin-left: 600px;">
+    <strong>Log Out</strong>
+  </a>
+</div>
+<!--<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usr of allemps">
+        <td>
+          <div class="d-flex align-items-center">
+            <img
+                src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                alt=""
+                style="width: 45px; height: 45px"
+                class="rounded-circle"
+                />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">{{usr.id}}</p>
+              <p class="text-muted mb-0">{{usr.name}}</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{usr.email}}</p>
+          <p class="text-muted mb-0">{{usr.dob}}</p>
+          <p class="fw-normal mb-1">{{usr.country}}</p>
+        </td>
+        <td>
+          <span class="badge badge-success rounded-pill d-inline">Active</span>
+        </td>
+        <td>Senior</td>
+        <td>
+          <button type="button" class="btn btn-link btn-sm btn-rounded">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->

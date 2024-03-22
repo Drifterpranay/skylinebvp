@@ -1,0 +1,13 @@
+.login-container{
+    /* margin-top: 10vh; */
+    width: 75vh;
+    height: 70vh;
+    border: 3px solid black; 
+    text-align: center;
+    padding: 10vh;
+    margin-top: 30vh;
+    margin-bottom: 50vh;
+    margin-left: 75vh;
+    margin-right: 75vh;
+    padding-top: 70px;
+}

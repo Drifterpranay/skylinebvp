@@ -1,0 +1,170 @@
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+  
+  .container {
+    max-width: 1920px;
+    width: 80%;
+    overflow: hidden;
+  }
+  
+  .container:after,
+  .container:before {
+    content: none;
+  }
+  
+  .destaque {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+  }
+  
+  .destaque .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: visible;
+    padding: 50px 0;
+  }
+  
+  .destaque__card {
+    width: 46.1%;
+    padding-top: 28.8%;
+    background-color: #000000;
+    position: relative;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.4s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .destaque__card:before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: #e9ba2d;
+    z-index: 1;
+    transition: all 0.3s, left 0.2s, width 0.2s, height 0.2s 0.2s;
+  }
+  
+  .destaque__card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 2px 35px -1px rgba(15, 15, 15, 0.5);
+  }
+  
+  .destaque__card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .destaque__card__content {
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    padding: 30px;
+  
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+  }
+  
+  .destaque__card__tag__tarja {
+    padding: 5px;
+    background-color: #e9ba2d;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .destaque__card__tag__tarja2 {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    max-width: calc(100% - 40px);
+  }
+  
+  .destaque__info__nome {
+    font-size: 20px;
+    word-wrap: break-word;
+  }
+  
+  .destaque__info__local {
+    font-size: 20px;
+    word-wrap: break-word;
+  }
+  
+  .destaque__info__valor {
+    float: right;
+    color: #e9ba2d;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .destaque__info__tags {
+    display: none;
+    flex-flow: row nowrap;
+    margin-top: 20px;
+    animation: fade 0.5s;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .destaque__info__tag {
+    border-radius: 50px;
+    border: 3px solid rgba(251, 247, 247, 0.1);
+    background-color: transparent;
+    padding: 15px;
+    margin-right: auto;
+  }
+  
+  .destaque__info__tag span {
+    color: #e9ba2d;
+    font-weight: bold;
+  }
+  
+  .destaque__card:hover .destaque__info__tags {
+    display: flex;
+  }
+  img{
+    height: 100px;
+    width: 100px;
+  }

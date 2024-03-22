@@ -1,0 +1,67 @@
+
+<div class="login-container" *ngIf="!isLoggedIn">
+  <form  #loginform="ngForm" (ngSubmit)="loginValidate(loginform.value)">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input id="form2Example" class="form-control" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  type="email" ngModel #email="ngModel" placeholder="email" required minlength="8" maxlength="36" />
+      <label class="form-label"   for="form2Example1">Email address</label>
+    </div>
+    <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" -->
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input id="form2Example2" class="form-control"   name="password" pattern="[^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,15}$]" type="password" placeholder="password"  ngModel #password="ngModel"  required minlength="8" maxlength="16"  />
+      <label class="form-label"  for="form2Example2">Password</label>
+    </div>
+    <!-- pattern="[^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,15}$]" -->
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+          <label class="form-check-label" for="form2Example31"> Remember me </label>
+        </div>
+      </div>
+       <br><br>
+      <div class="col">
+        <!-- Simple link -->
+       <a href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button  class="btn btn-primary btn-block mb-4" type="submit" value="login" [disabled]="!loginform.value" >Sign in</button>
+  
+    <!-- Register buttons -->
+    <div class="text-center">
+        <br>
+      <p>Not a member? <a href="Register">Register</a></p>
+      <br>
+      <!-- <p>or sign up with:</p>
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-google"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+      </button>
+  
+      <button type="button" class="btn btn-link btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button> -->
+
+      <div>
+        <div *ngIf="email.errors?.['required'] && email.touched "><p style="color: crimson;">*Please enter valid email</p></div>
+        <div *ngIf="email.errors?.['minlength'] && email.touched"><p style="color: crimson;">*Please enter at least 6 characters for email</p></div>
+        <div *ngIf="email.errors?.['pattern'] || email.touched"><p style="color: crimson;">ex:Example&#64;gmail.com</p></div>
+        <div *ngIf="password.errors?.['minlength'] && password.touched"><p style="color: crimson;">*Please enter at least 8 characters for password</p></div>
+        <div *ngIf="password.errors?.['required'] && password.touched"><p style="color: crimson;">*Please enter valid password</p></div>
+        <div *ngIf="password.errors?.['pattern'] || password.touched"><p style="color: crimson;">ex:Pass&#64;123</p></div>
+      </div>
+    </div>
+  </form>
+</div>
